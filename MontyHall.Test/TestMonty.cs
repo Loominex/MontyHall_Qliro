@@ -22,6 +22,9 @@ namespace MontyHall.Test
             var withNoChangeDoor = _montygame.Run(simulationNo, false);
             Assert.IsTrue(withChangeDoor.TrueGuess > withNoChangeDoor.TrueGuess);
         }
+        /// <summary>
+        /// checks if any simulation gone missing.
+        /// </summary>
         [TestMethod]
         public void Test_MultiThreading_Accuracy()
         {
