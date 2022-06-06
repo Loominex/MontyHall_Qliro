@@ -15,7 +15,7 @@ namespace MontyHall.Test
             _montygame = new MontyGame();
         }
         [TestMethod]
-        public void TestMethod1()
+        public void Test_General()
         {
             var simulationNo = 1000;
             var withChangeDoor = _montygame.Run(simulationNo, true);
@@ -23,7 +23,7 @@ namespace MontyHall.Test
             Assert.IsTrue(withChangeDoor.TrueGuess > withNoChangeDoor.TrueGuess);
         }
         [TestMethod]
-        public void TestMethod2()
+        public void Test_MultiThreading_Accuracy()
         {
             for (int i = 0; i < _simulationNoArray.Length; i++)
             {
@@ -32,7 +32,7 @@ namespace MontyHall.Test
             }
         }
         [TestMethod]
-        public void TestMethod3()
+        public void Test_MontyGame_By_Changing_Door()
         {
             for (int i = 0; i < _simulationNoArray.Length; i++)
             {
@@ -42,7 +42,7 @@ namespace MontyHall.Test
             }
         }
         [TestMethod]
-        public void TestMethod4()
+        public void Test_MontyGame_Without_Changing_Door()
         {
             for (int i = 0; i < _simulationNoArray.Length; i++)
             {
